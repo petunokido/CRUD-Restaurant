@@ -51,10 +51,9 @@ public class DishController
         return dishService.updateDish(id,updateDishRequest.getName(),updateDishRequest.getPrice());
     }
 
-    }
-
-    @DeleteMapping (value = "/dish-delete/{id}")
-    public void deleteById(@PathVariable(value = "id") Long id)
-    {
+    @DeleteMapping(value = "/dish-delete/{id}")
+    public void deleteById(@PathVariable(value = "id") Long id) {
         dishService.deleteById(id);
     }
+}
+
